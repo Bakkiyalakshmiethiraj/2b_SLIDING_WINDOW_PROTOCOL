@@ -1,5 +1,7 @@
+# BAKKIYALAKSHMI
 # 2b IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
 ## AIM:
+To write a python program to perform sliding window protocol
 
 ## ALGORITHM:
 1. Start the program.
