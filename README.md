@@ -10,6 +10,7 @@
 6. Stop the Program
 ## PROGRAM
 ```
+CLIENT:
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -28,7 +29,17 @@ while True:
  if ack:
  print(ack)
  i+=s
+SERVER:
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True: 
+ print(s.recv(1024).decode())
+ s.send("acknowledgement recived from the server".encode())
 ```
 ## OUPUT
+![Screenshot 2024-03-13 100518](https://github.com/Bakkiyalakshmiethiraj/2b_SLIDING_WINDOW_PROTOCOL/assets/144870983/3bc721cd-f81b-4eff-91d6-7a3c81403e78)
+![Screenshot 2024-03-13 100533](https://github.com/Bakkiyalakshmiethiraj/2b_SLIDING_WINDOW_PROTOCOL/assets/144870983/0abf4abf-4ec4-4c6e-b33a-014ec2475c11)
+
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed
